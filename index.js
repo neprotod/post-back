@@ -4,6 +4,9 @@ const express = require('express');
 
 const api = express();
 
+api.use(express.json());
+api.use(express.urlencoded({extended: true}));
+
 api.get('/test', (req, res) => {
   console.log('GET!');
   res.status(200).send('GET request to homepage');
