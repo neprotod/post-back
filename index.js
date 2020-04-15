@@ -10,12 +10,12 @@ api.get('/test', (req, res) => {
 });
 
 api.post('/test', (req, res) => {
-  console.log('POST!');
+  console.log('POST!', req.body);
   res.status(200).send('POST request to homepage');
 });
 
 api.put('/test', (req, res) => {
-  console.log('PUT!');
+  console.log('PUT!', req.body);
   res.status(200).send('PUT request to homepage');
 });
 
