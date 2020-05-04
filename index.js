@@ -8,7 +8,7 @@ api.use(express.json());
 api.use(express.urlencoded({extended: true}));
 
 api.get('/test', (req, res) => {
-  console.log('GET!');
+  console.log('GET2!', req.query);
   res.status(200).send('GET request to homepage');
 });
 
